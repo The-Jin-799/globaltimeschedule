@@ -44,7 +44,7 @@ setInterval(currentTime,1000)
 function fillFullURL(queryString){
   if(!window.location.search){
     var link=document.querySelector("#link")
-    var url=window.location.origin + "/globaltimeschedule/timed.html?" + queryString;
+    var url=window.location.href + "timed.html?" + queryString;
     link.value=url
   }
 
