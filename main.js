@@ -61,11 +61,16 @@ function handleSubmit(event) {
   {  
     formObject[key]=formData.get(key)
   }
+  console.log(formObject.date+" "+formObject.time)
   var submittedDate = new Date(formObject.date+'T'+formObject.time)
   //Convert submittted date and time to UTC
-  var localTime = submittedDate.getTime()
+  var utcDate = submittedDate.toISOString()
+  utcDate = utcDate.slice(0,19)
+  var convertedDate = new Date(utcDate)
+  var utc=convertedDate.getTime()
+ /* var localTime = submittedDate.getTime()
   var localOffset = submittedDate.getTimezoneOffset()*60000
-  var utc = localTime - localOffset
+  var utc = localTime - localOffset*/
   //generating query string with utc and msg
   queryObject={
     "utc":utc,
