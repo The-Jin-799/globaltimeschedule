@@ -10,7 +10,7 @@ utc=Number(queryObject.utc)
 var viewerDate = new Date()
 var viewerOffSet= viewerDate.getTimezoneOffset()
 viewerOffSet*=60000
-var localTimeMs=utc + viewerOffSet
+var localTimeMs=utc - viewerOffSet
 var localDate= new Date(localTimeMs)
 
 viewUpdatedTime = document.getElementById("time")

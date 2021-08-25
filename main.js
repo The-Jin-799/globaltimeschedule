@@ -65,7 +65,7 @@ function handleSubmit(event) {
   //Convert submittted date and time to UTC
   var localTime = submittedDate.getTime()
   var localOffset = submittedDate.getTimezoneOffset()*60000
-  var utc = localTime - localOffset
+  var utc = localTime + localOffset
   //generating query string with utc and msg
   queryObject={
     "utc":utc,
