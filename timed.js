@@ -12,4 +12,7 @@ var viewerOffSet= viewerDate.getTimezoneOffset()
 viewerOffSet*=60000
 var localTimeMs=utc-viewerOffSet
 var localDate= new Date(localTimeMs)
+
+viewUpdatedTime = document.getElementById("time")
+viewUpdatedTime.innerText=localDate.toLocaleString()
 console.log(localDate)
