@@ -66,14 +66,14 @@ function handleSubmit(event) {
   //Convert submittted date and time to UTC
   var utcDate = submittedDate.toISOString()
   utcDate = utcDate.slice(0,19)
-  var convertedDate = new Date(utcDate)
-  var utc=convertedDate.getTime()
+  //var convertedDate = new Date(utcDate)
+ // var utc=convertedDate.getTime()
  /* var localTime = submittedDate.getTime()
   var localOffset = submittedDate.getTimezoneOffset()*60000
   var utc = localTime - localOffset*/
   //generating query string with utc and msg
   queryObject={
-    "utc":utc,
+    "utc":utcDate,
     "msg":formObject.message
   }
   const queryString = new URLSearchParams(queryObject);
@@ -86,3 +86,4 @@ function handleSubmit(event) {
 
 timeForm.addEventListener('submit', handleSubmit);
 
+//utc millisecond generated is differnt for different timezones
