@@ -85,5 +85,16 @@ function handleSubmit(event) {
 }
 
 timeForm.addEventListener('submit', handleSubmit);
+//Copy button implementation
+function linkCopy(){
+  var link=document.getElementById("link")
+  
+  link.select();    
+  navigator.clipboard.writeText(link.value); 
+  
+}
+var btn=document.getElementById("copy")
+btn.addEventListener("click", linkCopy)
+
 
 //utc millisecond generated is differnt for different timezones

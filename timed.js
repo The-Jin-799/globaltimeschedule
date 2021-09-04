@@ -6,7 +6,7 @@ for(var key of queryString.keys())
     queryObject[key]=queryString.get(key)
 }
 
-utc=queryObject.utc
+var utc=queryObject.utc
 utc=utc.replace("T"," ")
 utc=utc+" UTC"
 console.log(utc)
@@ -18,4 +18,7 @@ var localDate= new Date(localTimeMs)*/
 
 viewUpdatedTime = document.getElementById("time")
 viewUpdatedTime.innerText=viewerDate.toLocaleString()
+var message=queryObject.msg
+var msg= document.getElementById("msg")
+msg.innerText=message
 console.log(viewerDate)
