@@ -25,7 +25,7 @@ function today()
   this.hour = hour
   this.min = min 
   this.timeZone = timeZone
-  this.time =`${d.toLocaleTimeString()} ${timeZone} `
+  this.time =`${d.toLocaleTimeString()}`
   this.timeoffset=offset
  
 }
@@ -35,8 +35,10 @@ window.onpaint = currentTime();
 function currentTime()
 {
   const Today= new today()
-  var nowTime = document.querySelector(".livetime P")
+  var nowTime = document.querySelector("#yourtime")
+  var nowZone = document.querySelector("#yourzone")
   nowTime.innerText= Today.time
+  nowZone.innerText= Today.timeZone
 }
 setInterval(currentTime,1000)
 
