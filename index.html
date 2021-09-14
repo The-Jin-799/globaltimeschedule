@@ -11,6 +11,7 @@
     
 </head>
 <body>
+    
     <header>
     <a href="/globaltimeschedule"><h1>Global Time Scheduler</h1></a>
     <div class="livetime">
@@ -19,22 +20,22 @@
     </div>
     </header>
     <div class="content">
-    <div class="mainform">
-    <form method="get" id="timeform" name="timeform">
-    
-        <input type="time" name="time" id="time" value="00:00">
+        <div class="mainform">
+            <form method="get" id="timeform" name="timeform">
        
-        <input type="date" name="date" id="date" required>
-        <input type="text" name="message" maxlength="25" id="message" placeholder="Event title" required>
-        <input type="submit" value="Get Link">
-    </form>
+                <input type="time" name="time" id="time" value="00:00">
+                <input type="date" name="date" id="date" required>
+                <input type="text" name="message" maxlength="25" id="message" placeholder="Event title" required>
+                <input type="submit" value="Get Link">
+        
+            </form>
+        </div>
+        <br/>
+        <div class="getlink">
+            <input type="text" name="link" readonly value="" id="link" size="50">
+            <button id="copy" >Copy</button>
+        </div>
     </div>
-    <br/>
-    <div class="getlink">
-    <input type="text" name="link" readonly value="" id="link" size="50">
-    <button id="copy" >Copy</button>
-    </div>
-</div>
 </body>
 <script src="main.js"></script>
 </html>
