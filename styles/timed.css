@@ -1,0 +1,95 @@
+*{
+    margin:0;
+    padding:0;
+}
+a{
+    text-decoration: none;
+    color: black;
+    font-family: 'Merriweather', serif;
+}
+h1{
+    padding: 15px;
+    font-size: 45px;
+}
+
+.calendercard{
+    font-family:  'Montserrat', sans-serif;
+    display: grid;
+    justify-items: center;
+    align-content: space-between;
+    height: 175px;
+    width:150px;
+    background: #FB9300;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+}
+
+#date{
+    font-weight: bold;
+    font-size: 75px;
+}
+#year{
+    font-weight: bold;
+    padding: 8px 0px;
+    text-align: center;
+    color: #fff;
+    width: 100%;
+}
+#month{
+    font-weight: bold;
+    padding: 8px 0px;
+    text-align: center;
+    color: #Fff;
+    width: 100%;
+}
+.content{
+    padding: 20px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 10.5px );
+    -webkit-backdrop-filter: blur( 10.5px );
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+.msgtime{
+    display: grid;
+    gap: 10px;
+    background: rgba( 255, 255, 255, 0.25 );
+
+}
+
+#time{
+    font-size: 64px;
+    font-family: 'Montserrat', serif;
+    
+}
+
+.message{
+    background: rgba( 74, 74, 74, 0.4 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 8.5px );
+    -webkit-backdrop-filter: blur( 8.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+#message{
+    padding: 15px;
+    font-family: 'Montserrat';
+    font-weight: bold;
+    font-size: 20px;
+}
+@media only screen and (max-width: 600px){
+    h1{
+        font-size: 18px;
+    }
+    #time{
+        font-size: 40px;
+    }
+    #message{
+        font-size: 15px;
+    }
+}
