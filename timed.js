@@ -11,10 +11,6 @@ utc=utc.replace("T"," ")
 utc=utc+" UTC"
 console.log(utc)
 var viewerDate = new Date(utc)
-/*var viewerOffSet= viewerDate.getTimezoneOffset()
-viewerOffSet*=60000
-var localTimeMs=utc - viewerOffSet
-var localDate= new Date(localTimeMs)*/
 var userdate=viewerDate.getDate()
 var useryear=viewerDate.getFullYear()
 var usermonth=viewerDate.getMonth()

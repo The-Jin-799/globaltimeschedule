@@ -68,11 +68,6 @@ function handleSubmit(event) {
   //Convert submittted date and time to UTC
   var utcDate = submittedDate.toISOString()
   utcDate = utcDate.slice(0,19)
-  //var convertedDate = new Date(utcDate)
- // var utc=convertedDate.getTime()
- /* var localTime = submittedDate.getTime()
-  var localOffset = submittedDate.getTimezoneOffset()*60000
-  var utc = localTime - localOffset*/
   //generating query string with utc and msg
   queryObject={
     "utc":utcDate,
@@ -100,3 +95,20 @@ btn.addEventListener("click", linkCopy)
 
 
 //utc millisecond generated is differnt for different timezones
+
+//modal pop up
+var modal = document.getElementsByClassName("modal")[0]
+var aboutbtn=document.getElementById("about")
+var close=document.getElementsByClassName("close")[0]
+aboutbtn.onclick = function(){
+  modal.style.display="block"
+}
+
+close.onclick=function(){
+  modal.style.display="none"
+}
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
